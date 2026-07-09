@@ -180,8 +180,7 @@ def build(upstream_text):
     header = make_banner(
         width,
         HEADER_TITLE,
-        HEADER_MOTTO,
-        f"version: {CLEANFOX_VERSION} (synced with Betterfox v{upstream_version})",
+        f"version: {VoidFOX_VERSION} (synced with Betterfox v{upstream_version})",
         f"url: {HEADER_URL}",
     )
 
