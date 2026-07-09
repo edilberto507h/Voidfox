@@ -1,8 +1,8 @@
-name: Sync with Betterfox
+name: Update from Betterfox
 
 on:
   schedule:
-    - cron: "0 19 9 * *"  # 19:00 UTC on the 9st of each month
+    - cron: "0 20 9 * *"  # 19:00 UTC on the 9st of each month
   workflow_dispatch:       # manual trigger
 
 permissions:
