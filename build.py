@@ -15,6 +15,7 @@ UPSTREAM_URL = "https://raw.githubusercontent.com/yokoffing/Betterfox/main/user.
 ROOT = Path(__file__).resolve().parent
 
 # --- RECIPE ---------------------------------------------------------------
+VoidFOX_VERSION = "1.0"
 HEADER_TITLE = "VoidFOX"
 HEADER_URL = "https://github.com/edilberto507h/Voidfox"
 
