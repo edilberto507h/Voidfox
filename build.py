@@ -144,7 +144,7 @@ def apply_overlay(body, ov):
         if key in ov["remove"]:
             continue
         if key in ov["disable"]:
-            out.append(f'{indent}// user_pref("{key}", {val});{trail} [CLEANFOX]')
+            out.append(f'{indent}// user_pref("{key}", {val});{trail} [VoidFOX]')
             continue
         if key in ov["set"]:
             out.append(f'{indent}user_pref("{key}", {ov["set"][key]});{trail}')
@@ -198,7 +198,7 @@ def build(upstream_text):
         make_banner(width, "SECTION: VoidFOX")
         + FOOTER_BODY.splitlines()
         + [""]
-        + make_banner(width, "END: CLEANFOX")
+        + make_banner(width, "END: VoidFOX")
     )
 
     blocks = [preamble, header, fastfox, securefox, peskyfox, footer]
