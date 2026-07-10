@@ -2,7 +2,7 @@ name: Update from Betterfox
 
 on:
   schedule:
-    - cron: "0 20 9 * *"  # 19:00 UTC on the 9st of each month
+    - cron: "0 1 2 * *"  # 01:00 UTC on day 2 of each month
   workflow_dispatch:       # manual trigger
 
 permissions:
@@ -12,7 +12,7 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
 
       - uses: actions/setup-python@v6
         with:
