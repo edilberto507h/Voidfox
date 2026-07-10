@@ -237,5 +237,5 @@ user_pref("browser.tabs.hoverPreview.enabled", false);
 // user_pref("geo.provider.use_geoclue", false); // [FF102+] [LINUX]
 
 /****************************************************************************
- * END: CLEANFOX                                                            *
+ * END: VoidFOX                                                            *
 ****************************************************************************/
