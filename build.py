@@ -219,7 +219,7 @@ def main():
 
     out, version = build(upstream_text)
     (ROOT / "user.js").write_text(out, encoding="utf-8", newline="\n")
-    snap = ROOT / "upstream" / "betterfox.user.js"
+    snap = ROOT / "upstream" / "betterfox.js"
     snap.parent.mkdir(exist_ok=True)
     snap.write_text(upstream_text, encoding="utf-8", newline="\n")
     print(f"built user.js from Betterfox v{version}")
