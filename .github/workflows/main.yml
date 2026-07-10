@@ -15,7 +15,8 @@ jobs:
       - uses: actions/checkout@v6
 	  
       - uses: actions/setup-python@v5
-        with: python-version: '3.x'
+        with:
+		  python-version: '3.x'
 
       - name: Build user.js from upstream Betterfox
         run: python build.py
