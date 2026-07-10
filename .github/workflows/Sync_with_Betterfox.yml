@@ -1,0 +1,37 @@
+name: Update from Betterfox
+
+on:
+  schedule:
+    - cron: "0 1 2 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set up Python 3.10
+      uses: actions/setup-python@v3
+      with:
+        python-version: '3.10'
+    - name: Build user.js from upstream Betterfox
+      run: python build.py
+      
+    - name: Commit if any change is found
+      run: |
+        git config user.name "github-action[bot]"
+        git config user.email "github-action[bot]@user.noreply.github.com"
+        if git diff --quiet; then
+            echo "No changes."
+            exit 0
+          fi
+
+          VERSION=$(grep -oP 'version:\s*\K\d+' upstream/betterfox.js | head -1)
+
+          git add user.js upstream/betterfox.js
+          git commit -m "chore: Updated with Betterfox v${VERSION}"
+          git push
