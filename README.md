@@ -19,7 +19,7 @@ Voidfox is a Firefox  `user.js` configuration built from [Betterfox](https://git
 
 ## Add an Ad Blocker and DNS protection
 
-1) Get [uBlock Origin](https://addons.mozilla.org/blog/ublock-origin-everything-you-need-to-know-about-the-ad-blocker/) with Betterfox [recommended filters](https://github.com/yokoffing/filterlists#guidelines).
+1) Get [uBlock Origin](https://addons.mozilla.org/es-ES/firefox/addon/ublock-origin/) with Betterfox [recommended filters](https://github.com/yokoffing/filterlists#guidelines).
 2) See enable [**DNS-level protection**](https://support.mozilla.org/en-US/kb/dns-over-https)
     * Check Betterfox configuration [guide](https://github.com/yokoffing/NextDNS-Config) for the best experience.
 
